@@ -59,6 +59,7 @@ public class clsLoginControl implements ActionListener{
                 vObjUsuariosBD = vObjUsuariosDAO.leerPorUsername(user);
                 if (autentificarUser(vObjUsuariosLogin, vObjUsuariosBD)){
                     frmMainMDI MDI = new frmMainMDI();
+                    this.prvObjFrmLogin.dispose();
                     MDI.setVisible(true);
                 }
             }else{
