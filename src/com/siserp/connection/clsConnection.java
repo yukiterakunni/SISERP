@@ -14,8 +14,8 @@ import java.sql.SQLException;
  */
 import java.sql.DriverManager;
 public class clsConnection {
-    private static final String prvUser ="root", prvPass = "", prvDatabase = "peso_ideal";
-    private static final String prvServer = "jdbc:mysql://localhost:3306/peso_ideal", driver ="com.mysql.jdbc.Driver";
+    private static final String prvUser ="root", prvPass = "", prvDatabase = "siserp";
+    private static final String prvServer = "jdbc:mysql://localhost:3306/siserp", driver ="com.mysql.jdbc.Driver";
     private static Connection prvObjConnection;
     public String prvStrMensaje;
     //Constructor

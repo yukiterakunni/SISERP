@@ -5,6 +5,9 @@
  */
 package com.siserpjava.views;
 
+import java.awt.Color;
+import java.awt.Cursor;
+
 /**
  *
  * @author yukit
@@ -39,7 +42,8 @@ public class frmLogin extends javax.swing.JFrame {
         txtPass = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         btnEnviar = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
+        lblRegistro = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("com/siserpjava/views/Bundle"); // NOI18N
@@ -161,12 +165,24 @@ public class frmLogin extends javax.swing.JFrame {
         jPanel1.add(btnEnviar);
         btnEnviar.setBounds(260, 280, 230, 30);
 
-        jLabel7.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText(bundle.getString("frmLogin.jLabel7.text")); // NOI18N
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(280, 320, 190, 16);
+        lblRegistro.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        lblRegistro.setForeground(new java.awt.Color(0, 51, 102));
+        lblRegistro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblRegistro.setText(bundle.getString("frmLogin.lblRegistro.text")); // NOI18N
+        lblRegistro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblRegistroMouseEntered(evt);
+            }
+        });
+        jPanel1.add(lblRegistro);
+        lblRegistro.setBounds(410, 320, 60, 16);
+
+        jLabel8.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText(bundle.getString("frmLogin.jLabel8.text")); // NOI18N
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(280, 320, 130, 16);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -202,6 +218,11 @@ public class frmLogin extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnEnviarActionPerformed
 
+    private void lblRegistroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegistroMouseEntered
+        lblRegistro.setForeground(Color.RED);
+        lblRegistro.setCursor(Cursor.getPredefinedCursor(HAND_CURSOR));
+    }//GEN-LAST:event_lblRegistroMouseEntered
+
     /**
      * @param args the command line arguments
      */
@@ -213,7 +234,7 @@ public class frmLogin extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -246,9 +267,10 @@ public class frmLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblRegistro;
     public javax.swing.JPasswordField txtPass;
     public javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables

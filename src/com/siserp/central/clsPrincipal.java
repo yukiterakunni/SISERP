@@ -6,6 +6,7 @@
 package com.siserp.central;
 
 import com.siserp.central.controls.clsLoginControl;
+import com.siserp.connection.clsConnection;
 import com.siserpjava.views.frmLogin;
 
 /**

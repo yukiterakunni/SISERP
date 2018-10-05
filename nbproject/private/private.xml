@@ -5,22 +5,15 @@
         <group>
             <file>file:/J:/Repositorios/SISERP/src/com/siserp/central/controls/clsLoginControl.java</file>
             <file>file:/J:/Repositorios/SISERP/src/com/siserp/central/clsPrincipal.java</file>
-            <file>file:/J:/Repositorios/SISERP/src/com/siserp/views/comercial/jpItems.java</file>
-            <file>file:/J:/Repositorios/SISERP/src/com/siserpjava/views/Bundle.properties</file>
-            <file>file:/J:/Repositorios/SISERP/src/com/siserp/views/comercial/jpTiposInventario.java</file>
-            <file>file:/J:/Repositorios/SISERP/src/com/siserp/models/clsTercero.java</file>
-            <file>file:/J:/Repositorios/SISERP/src/com/siserpjava/views/frmMainMDI.java</file>
-            <file>file:/J:/Repositorios/SISERP/src/com/siserp/components/clsToolbar.java</file>
+            <file>file:/J:/Repositorios/SISERP/src/com/siserp/central/models/clsUsuarios.java</file>
             <file>file:/J:/Repositorios/SISERP/src/com/siserp/models/clsTerceroDAO.java</file>
             <file>file:/J:/Repositorios/SISERP/src/com/siserp/connection/clsConnection.java</file>
             <file>file:/J:/Repositorios/SISERP/src/com/siserp/central/clsConection.java</file>
             <file>file:/J:/Repositorios/SISERP/src/com/siserp/views/comercial/jpTerceros.java</file>
-            <file>file:/J:/Repositorios/SISERP/src/com/siserpjava/views/MDI.java</file>
-            <file>file:/J:/Repositorios/SISERP/src/com/siserpjava/views/jdErrorOkCancel.java</file>
-            <file>file:/J:/Repositorios/SISERP/src/com/siserp/components/clsMenuBar.java</file>
+            <file>file:/J:/Repositorios/SISERP/src/com/siserp/models/clsTercero.java</file>
             <file>file:/J:/Repositorios/SISERP/src/com/siserpjava/views/frmLogin.java</file>
-            <file>file:/J:/Repositorios/SISERP/src/com/siserp/views/comercial/Bundle.properties</file>
             <file>file:/J:/Repositorios/SISERP/src/com/siserp/controlsComercial/clsTerceroControl.java</file>
+            <file>file:/J:/Repositorios/SISERP/src/com/siserp/central/models/clsUsuariosDAO.java</file>
         </group>
     </open-files>
 </project-private>
