@@ -25,13 +25,14 @@ public class clsUsuariosDAO {
     private clsUsuarios prvObjUsuarios;
 
     public clsUsuariosDAO(clsUsuarios pvObjUsuarios) {
-        this.prvObjUsuarios = pvObjUsuarios;
         inicializarInstancias();
+        this.prvObjUsuarios = pvObjUsuarios;
     }
     
     private void inicializarInstancias(){
         prvObjClsConnection = new clsConnection();
         prvObjConnection = prvObjClsConnection.conectar();
+        this.prvObjUsuarios = null;
     }
     /* CREATE */
     public Boolean createUser(String userName,String password){

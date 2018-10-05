@@ -54,13 +54,19 @@ public class clsLoginControl implements ActionListener{
             //Valida que los campos no esten vacios
             if(!user.equals("") && !user.equals("")){
                 clsUsuarios vObjUsuariosLogin = new clsUsuarios(user);
+                vObjUsuariosLogin.setPrvStrUserPass(pass);
                 clsUsuarios vObjUsuariosBD = new clsUsuarios();
-                clsUsuariosDAO vObjUsuariosDAO = new clsUsuariosDAO(vObjUsuariosLogin);
+                clsUsuariosDAO vObjUsuariosDAO = new clsUsuariosDAO(vObjUsuariosBD);
                 vObjUsuariosBD = vObjUsuariosDAO.leerPorUsername(user);
                 if (autentificarUser(vObjUsuariosLogin, vObjUsuariosBD)){
                     frmMainMDI MDI = new frmMainMDI();
                     this.prvObjFrmLogin.dispose();
                     MDI.setVisible(true);
+                }
+                else {
+                    jdErrorOkCancel vjdError = new jdErrorOkCancel(prvObjFrmLogin,true,"Usuario o password invalidos.");
+                    vjdError.setLocationRelativeTo(prvObjFrmLogin);
+                    vjdError.setVisible(true);
                 }
             }else{
                 jdErrorOkCancel vjdError = new jdErrorOkCancel(prvObjFrmLogin,true,"Error de datos, no ha diligenciado los campos obligatorios.");
@@ -71,9 +77,11 @@ public class clsLoginControl implements ActionListener{
     }
     private Boolean autentificarUser(clsUsuarios pvObjUserLogin, clsUsuarios pvObjUserBD){
         Boolean vBoolResponse;
-        vBoolResponse = true;
-        
-        return true;
+        vBoolResponse = false;
+        if (pvObjUserLogin.getPrvStrUserPass().equals(pvObjUserBD.getPrvStrUserPass())){
+            vBoolResponse = true;
+        }
+        return vBoolResponse;
     }
     
     
