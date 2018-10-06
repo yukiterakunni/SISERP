@@ -9,8 +9,7 @@ import com.siserp.central.controls.clsLoginControl;
 import com.siserp.connection.clsConnection;
 import com.siserpjava.views.frmLogin;
 
-/**
- *
+/*
  * @author JHON.VIVAS
  * Metodo principal de la app
  */
@@ -19,6 +18,7 @@ public class clsPrincipal {
     public String pubStrLang;
     
     private static boolean initApp(){
+            setLookFeel();
             return true;
         }
     
@@ -27,8 +27,7 @@ public class clsPrincipal {
         vObjLogin.showFrmLogin();
     }
     
-    public static void main(String args[]) {
-        //COLOCAR LOOK AND FEEL PREDETERMINADO DE WINDOWS
+    private static void setLookFeel(){
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Windows".equals(info.getName())) {
@@ -45,10 +44,13 @@ public class clsPrincipal {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(frmLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+    }
+    
+    public static void main(String args[]) {
+        //COLOCAR LOOK AND FEEL PREDETERMINADO DE WINDOWS
         if (initApp()) {
             mostrarLogin();
         }
-        
     }
     
     

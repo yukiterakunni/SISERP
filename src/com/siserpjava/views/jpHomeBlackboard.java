@@ -5,6 +5,8 @@
  */
 package com.siserpjava.views;
 
+import com.siserp.central.clsSesion;
+
 /**
  *
  * @author yukit
@@ -16,6 +18,8 @@ public class jpHomeBlackboard extends javax.swing.JPanel {
      */
     public jpHomeBlackboard() {
         initComponents();
+        clsSesion objSesionActual = clsSesion.getInstance();
+        lblUserName.setText(objSesionActual.getPrvUserName());
     }
 
     /**
@@ -36,7 +40,7 @@ public class jpHomeBlackboard extends javax.swing.JPanel {
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        lblUserName = new javax.swing.JLabel();
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -73,10 +77,10 @@ public class jpHomeBlackboard extends javax.swing.JPanel {
         jButton13.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar2.add(jButton13);
 
-        jLabel5.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Jhon Edison Vivas Moreno");
+        lblUserName.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        lblUserName.setForeground(new java.awt.Color(255, 255, 255));
+        lblUserName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblUserName.setText("Jhon Edison Vivas Moreno");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -89,7 +93,7 @@ public class jpHomeBlackboard extends javax.swing.JPanel {
                 .addContainerGap(28, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblUserName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -98,7 +102,7 @@ public class jpHomeBlackboard extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel4)
                 .addGap(1, 1, 1)
-                .addComponent(jLabel5)
+                .addComponent(lblUserName)
                 .addGap(18, 18, 18)
                 .addComponent(jToolBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(284, Short.MAX_VALUE))
@@ -151,10 +155,10 @@ public class jpHomeBlackboard extends javax.swing.JPanel {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JToolBar jToolBar2;
     private javax.swing.JPanel jpPrincipal;
+    private javax.swing.JLabel lblUserName;
     // End of variables declaration//GEN-END:variables
 }

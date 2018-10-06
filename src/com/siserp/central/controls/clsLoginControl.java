@@ -5,6 +5,7 @@
  */
 package com.siserp.central.controls;
 
+import com.siserp.central.clsSesion;
 import com.siserp.central.models.clsUsuarios;
 import com.siserpjava.views.frmLogin;
 import com.siserpjava.views.jdErrorOkCancel;
@@ -59,6 +60,8 @@ public class clsLoginControl implements ActionListener{
                 clsUsuariosDAO vObjUsuariosDAO = new clsUsuariosDAO(vObjUsuariosBD);
                 vObjUsuariosBD = vObjUsuariosDAO.leerPorUsername(user);
                 if (autentificarUser(vObjUsuariosLogin, vObjUsuariosBD)){
+                    clsSesion objSesionActual = clsSesion.getInstance();
+                    objSesionActual.setPrvUserName(vObjUsuariosBD.getPrvStrUserName());
                     frmMainMDI MDI = new frmMainMDI();
                     this.prvObjFrmLogin.dispose();
                     MDI.setVisible(true);
