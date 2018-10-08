@@ -20,7 +20,7 @@ public class clsTerceroDAO{
     private clsConnection prvConeccion;
 
     public clsTerceroDAO() {
-        this.prvConeccion = new clsConnection();
+        this.prvConeccion.getObjConnection();
     }
     
     private final String SQL_INSERT =  "insert into t0001_terceros values ()";
@@ -33,7 +33,7 @@ public class clsTerceroDAO{
         Connection vConnection = null;
         PreparedStatement vStmt = null;
         int vRows = 0;
-        vConnection = new clsConnection().conectar();
+        vConnection = prvConeccion.conectar();
         vStmt = vConnection.prepareStatement(SQL_INSERT);
         int index = 1;
         vStmt.setString(index, SQL_INSERT);

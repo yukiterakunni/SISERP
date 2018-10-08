@@ -16,7 +16,7 @@ public class clsSesion {
     private String prvLangApp;
     //private static clsSesion ObjInstanciaSesion = new clsSesion();
 
-    public clsSesion() {
+    private clsSesion() {
         
     }
 

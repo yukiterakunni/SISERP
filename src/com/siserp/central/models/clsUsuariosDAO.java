@@ -30,8 +30,8 @@ public class clsUsuariosDAO {
     }
     
     private void inicializarInstancias(){
-        prvObjClsConnection = new clsConnection();
-        prvObjConnection = prvObjClsConnection.conectar();
+        prvObjClsConnection = clsConnection.getObjConnection();
+        this.prvObjConnection = prvObjClsConnection.conectar();
         this.prvObjUsuarios = null;
     }
     /* CREATE */
