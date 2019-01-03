@@ -5,7 +5,7 @@
  */
 package com.siserp.central;
 
-import com.siserpjava.views.jpHomeBlackboard;
+import com.siserp.views.central.jpHomeBlackboard;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

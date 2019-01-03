@@ -7,10 +7,11 @@ package com.siserp.central.controls;
 
 import com.siserp.central.clsSesion;
 import com.siserp.central.models.clsUsuarios;
-import com.siserpjava.views.frmLogin;
-import com.siserpjava.views.jdErrorOkCancel;
+import com.siserp.views.central.frmLogin;
+import com.siserp.views.central.jdErrorOkCancel;
 import com.siserp.central.models.clsUsuariosDAO;
-import com.siserpjava.views.frmMainMDI;
+import com.siserp.views.central.frmLoginUsers;
+import com.siserp.views.central.frmMainMDI;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -76,6 +77,11 @@ public class clsLoginControl implements ActionListener{
                 vjdError.setLocationRelativeTo(prvObjFrmLogin);
                 vjdError.setVisible(true);
             }
+        }
+        if(ObjectEvent.getSource() == prvObjFrmLogin.lblRegistro){
+            prvObjFrmLogin.dispose();
+            frmLoginUsers vObjFrmLoginUsers = new frmLoginUsers();
+            vObjFrmLoginUsers.setVisible(true);
         }
     }
     private Boolean autentificarUser(clsUsuarios pvObjUserLogin, clsUsuarios pvObjUserBD){

@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package com.siserp.connection;
-import com.siserpjava.views.frmError;
-import com.siserpjava.views.jdErrorOkCancel;
+import com.siserp.views.central.frmError;
+import com.siserp.views.central.jdErrorOkCancel;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

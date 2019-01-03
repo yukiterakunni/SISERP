@@ -40,7 +40,7 @@ public class clsUsuariosDAO {
         Boolean vBoolResp = false;
         
         try{
-            vStatment = prvObjConnection.prepareStatement("insert into t0000_users (f0000_id, f0000_pass) values (?,?)");
+            vStatment = prvObjConnection.prepareStatement("insert into t0000_users (f0000_user_name, f0000_pass) values (?,?)");
             vStatment.setString(1, userName);
             vStatment.setString(2, password);
             
@@ -68,7 +68,7 @@ public class clsUsuariosDAO {
             while(vResultado.next()){
                 vObjUsuarios = new clsUsuarios();
                 vObjUsuarios.setPrvStrUserName(vResultado.getString(1));
-                vObjUsuarios.setPrvStrUserPass(vResultado.getString(2));
+                vObjUsuarios.setPrvStrUserPass(vResultado.getString(4));
                 listaUsuarios.add(vObjUsuarios);  
                 vObjUsuarios = null;
             }
@@ -82,13 +82,13 @@ public class clsUsuariosDAO {
     /* READ FOR USER NAME */
     public clsUsuarios leerPorUsername(String pvUserName){
         try{            
-            vStatment = prvObjConnection.prepareStatement("select * from t0000_users where f0000_id = ?");
+            vStatment = prvObjConnection.prepareStatement("select * from t0000_users where f0000_user_name = ?");
             vStatment.setString(1, pvUserName);
             ResultSet vResultado = vStatment.executeQuery();
             
             while(vResultado.next()){
                 prvObjUsuarios.setPrvStrUserName(vResultado.getString(1));
-                prvObjUsuarios.setPrvStrUserPass(vResultado.getString(2));
+                prvObjUsuarios.setPrvStrUserPass(vResultado.getString(4));
             }                   
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null, "Error SQL "+ex);

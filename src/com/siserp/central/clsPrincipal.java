@@ -7,7 +7,7 @@ package com.siserp.central;
 
 import com.siserp.central.controls.clsLoginControl;
 import com.siserp.connection.clsConnection;
-import com.siserpjava.views.frmLogin;
+import com.siserp.views.central.frmLogin;
 
 /*
  * @author JHON.VIVAS
